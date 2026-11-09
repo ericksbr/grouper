@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/grouper_logo.png" alt="Grouper logo" width="400"/>
+</p>
+
 # Grouper
 
 Grouper groups similar public comments based on **word overlap** (not topic). It finds comments with shared wording, even if they're not identical. Upload a CSV, Excel, or Parquet file, run the notebook in Google Colab, and download your file with each comment labeled by grouping status and similarity level.
