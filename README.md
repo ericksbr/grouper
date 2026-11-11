@@ -99,7 +99,7 @@ F shares no shingles with A. Score: 0, so F stays "Ungrouped."
 
 Grouper visits the most-copied comments first. A is the most-copied, so it becomes the group's representative. Any comment that scores 0.50 or higher with the representative joins its group. A representative always belongs to its own group, so groups don't chain together through a middle comment. Groups are numbered by size, largest first; ungrouped comments are group size 1. Grouper can limit how many representatives a fingerprint bucket allows in its first pass. A second pass gives any leftover comment its own group, so no comment is dropped.
 
-**Families (Stage 7).** Each group is described by its medoid, the member most similar to the rest of its group. Grouper compares medoids across groups. Groups whose medoids score 0.40 or higher are linked into one family. Families can reveal coordinated campaigns that use several related templates. F is ungrouped, so it isn't in a family.
+**Families (Stage 7).** Each group is described by its medoid, the member most similar to the rest of its group. Grouper compares medoids across groups. Groups whose medoids score 0.40 or higher are linked into one family. Families can reveal coordinated campaigns that use several related templates or share common edits (paragraph insertion or deletion). F is ungrouped, so it isn't in a family.
 
 Grouper compares wording, not meaning. A single changed word can move a comment to a different group level, even when the two comments say nearly the same thing.
 
