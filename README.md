@@ -33,7 +33,7 @@ Act 1 of the notebook runs these stages. This example follows them with six shor
 
 **Stage 3: Normalize, then look again.** Grouper lowercases each comment and removes punctuation, then looks for matches again. C matches A and B after this step, so C is also an identical copy and joins their group.
 
-**Stage 4: Break the text into shingles, then fingerprint them.** A *shingle* is a run of 5 words in a row, taken from the normalized text. A has 10 shingles:
+**Stage 4: Break the text into shingles, then fingerprint them.** A *shingle* is a run of words in a row (e.g., 5-word segments), taken from the normalized text. A has 10 5-word shingles:
 
 <div align="center">
 
