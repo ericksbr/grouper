@@ -22,7 +22,7 @@ Grouper finds comments that share wording. It compares words, not meaning. Real 
 
 Act 1 of the notebook runs these stages. This example follows them with six short comments:
 
-- **A (base):** I oppose this plan to protect wolves. It harms their habitat and elk herds.
+- **A:** I oppose this plan to protect wolves. It harms their habitat and elk herds.
 - **B:** I oppose this plan to protect wolves. It harms their habitat and elk herds.
 - **C:** i OPPOSE this plan to protect wolves! it harms their habitat and elk herds.
 - **D:** I STRONGLY oppose this plan to protect wolves. It harms their habitat and elk herds.
