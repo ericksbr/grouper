@@ -110,9 +110,11 @@ Grouper compares wording, not meaning. A single changed word can move a comment 
 - **Grouped - Moderately similar**: best match in group has Jaccard in (0.50, 0.90)
 
 ## Output columns
-Added to your original columns: `group_id`, `group_size`, `group_label`, `is_identical`, `J_to_rep` (similarity to the group's representative), `max_j_in_group` (best match within the group), `best_match_id`, `is_group_rep`, `group_rep_id`, `family_id`, `family_size`, `family_anchor_row`. A blank `family_id` means the comment is not in a family.
+Added to your original columns: `group_id`, `group_size`, `group_label`, `is_identical`, `J_to_rep` (similarity to the group's representative), `max_j_in_group` (best match within the group), `is_group_rep`, `rep_id` (the comment ID of the group's representative), `family_id`, `family_size`, `family_anchor_id` (the comment ID of the family's anchor). A blank `family_id` means the comment is not in a family.
 
-The `*_id` and `*_row` columns that point to other comments (`best_match_id`, `group_rep_id`, `family_anchor_row`) hold **row positions** in your input file, not comment IDs.
+- Rows are sorted by family, then group, then `J_to_rep` (highest first), then comment ID. The group explorer uses the same order.
+- Families are numbered from largest to smallest, by number of comments.
+- If your file has no ID column, Grouper adds a `row_number` column (the original 1-based row) and uses it as the ID.
 
 ## Note
 Similarity is based on *word-level 5-gram shingles* (word overlap), not semantic topic similarity. Two comments discussing the same topic in different words may not group together.
